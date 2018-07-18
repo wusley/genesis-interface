@@ -47,7 +47,7 @@ export default class Success extends Component {
                     cache: 'default'
                   };
 
-    axios( 'http://ec2-18-228-44-201.sa-east-1.compute.amazonaws.com:3000/api/org.cattle.tracker.Contract', options )
+    axios( 'http://35.184.4.30:3000/api/org.cattle.tracker.Contract', options )
       .then( ( response ) => {
 
         if( response.status == 200 ) {

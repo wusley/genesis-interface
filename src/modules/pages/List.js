@@ -50,7 +50,7 @@ export default class List extends Component {
                     cache: 'default'
                   };
 
-    axios( 'http://ec2-18-228-44-201.sa-east-1.compute.amazonaws.com:3000/api/org.cattle.tracker.Animal', options )
+    axios( 'http://35.184.4.30:3000/api/org.cattle.tracker.Animal', options )
       .then( ( response ) => {
 
         if( response.status == 200 ) {
@@ -108,7 +108,7 @@ export default class List extends Component {
 
     console.log( data );
 
-    axios.post( 'http://ec2-18-228-44-201.sa-east-1.compute.amazonaws.com:3000/api/org.cattle.tracker.CreateContract', data )
+    axios.post( 'http://35.184.4.30:3000/api/org.cattle.tracker.CreateContract', data )
       .then( ( response ) => {
 
         if( response.status == 200  ) {
