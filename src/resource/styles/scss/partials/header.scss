@@ -1,0 +1,54 @@
+@import "../helpers/variables";
+
+#header {
+  position: relative;
+  padding: 25px 0;
+  z-index: 9999;
+
+  .box-header {
+    background-color: white;;
+  }
+
+  .box-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon-logo {
+      height: 40px;
+      display: block;
+      cursor: pointer;
+
+      .obj-path {
+        fill: #030303;
+        transition-duration: 0.3s;
+      }
+
+      @media screen and ( $breakpointDesktop ) {
+        &:hover {
+          .obj-path {
+            fill: #6a4d32;
+          }
+        }
+      }
+    }
+
+    .text-logo {
+      color: #030303;
+      margin: 0 0 0 10px;
+      font: 24px "robotobold";
+    }
+  }
+
+  @media screen and ( $breakpointPhone ), screen and ( $breakpointTablet ) {
+    padding: 0;
+  }
+}
+
+.lock {
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+}

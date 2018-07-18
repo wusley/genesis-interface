@@ -1,0 +1,27 @@
+@import "../helpers/variables";
+
+#footer {
+  background-color: #464646;
+  margin-top: 50px;
+
+  @media screen and ( $breakpointPhone ), screen and ( $breakpointTablet ) {
+    margin-top: 30px;
+  }
+
+  .menu-footer {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .quick-text {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #303030;
+    color: rgba( 123, 123, 123, .5 );
+    font: 12px "robotoregular";
+
+    .container-text {
+      max-width: 1024px;
+    }
+  }
+}

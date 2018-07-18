@@ -1,0 +1,158 @@
+@import "../helpers/variables";
+
+#menu {
+  height: 100%;
+
+  .icon-menu {
+    display: none;
+    height: 40px;
+    float: right;
+    cursor: pointer;
+
+    .line-path-1 {
+      fill: #515151;
+      transition-duration: 0.3s;
+    }
+
+    .line-path-2 {
+      fill: lighten( #515151, 30% );
+      transition-duration: 0.3s;
+    }
+
+    @media screen and ( $breakpointDesktop ) {
+      &:hover {
+        .line-path-1 {
+          fill: #6a4d32;
+        }
+
+        .line-path-2 {
+          fill: lighten( #6a4d32, 30% );
+        }
+      }
+    }
+  }
+
+  &.activate {
+    .icon-menu {
+      .line-path-1 {
+        fill: #6a4d32;
+      }
+
+      .line-path-2 {
+        fill: lighten( #6a4d32, 30% );
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: inherit;
+  }
+
+  .item {
+    margin-left: 40px;
+  }
+
+  a {
+    color: #515151;
+    font: 24px "robotobold";
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &.activate {
+      color: #6a4d32;
+    }
+
+    &.disabled {
+      color: #ccc;
+    }
+  }
+
+  @media screen and ( $breakpointPhone ), screen and ( $breakpointTablet ) {
+    .icon-menu {
+      display: block;
+
+      .list {
+        top: 0vh;
+      }
+    }
+
+    .list {
+      position: fixed;
+      overflow: scroll;
+      top: -120vh;
+      padding-top: 72px;
+      padding-bottom: 20px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      z-index: -1;
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      transition-duration: 0.8s;
+    }
+
+    .item {
+      position: relative;
+      width: 100%;
+      margin-left: 0;
+      padding-left: 16px;
+      padding-right: 16px;
+      z-index: 1;
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        left: 15px;
+        right: 15px;
+        bottom: -10px;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom;
+        z-index: -1;
+      }
+
+      &:nth-child( even ) {
+        &:after {
+          background-image: url( ../../../images/svg/line-type-a1.svg );
+        }
+      }
+
+      &:nth-child(odd) {
+        &:after {
+          background-image: url( ../../../images/svg/line-type-a2.svg );
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 1em;
+    }
+
+    &.activate {
+      .list {
+        top: 0;
+      }
+    }
+  }
+}
