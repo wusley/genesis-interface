@@ -4,9 +4,30 @@ import { Form, FormGroup, ControlLabel, Col, FormControl, Checkbox, Button } fro
 // Common
 
 // CSS
-import '../../resource/styles/scss/pages/home.scss';
+import '../../resource/styles/scss/pages/list.scss';
 
 export default class Home extends Component {
+
+  submit() {
+    var myHeaders = new Headers();
+
+    var options = {
+                    method: 'GET',
+                    headers: myHeaders,
+                    mode: 'cors',
+                    cache: 'default'
+                  };
+
+    // fetch( 'flowers.jpg', options )
+    //   .then( ( response ) => {
+    //
+    //     console.log( 'teste' );
+    //
+    //     // return response.blob();
+    //
+    //   } )
+  }
+
   render() {
     return (
       <div id="home">
@@ -14,21 +35,48 @@ export default class Home extends Component {
           <div className="mdc-layout-grid__inner">
             <div className="mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
               <Form horizontal>
-                <FormGroup controlId="formHorizontalEmail">
+                <FormGroup controlId="formRFId">
                   <Col componentClass={ControlLabel} sm={2}>
-                    Field 1
+                    RFId
                   </Col>
                   <Col sm={10}>
-                    <FormControl type="text" placeholder="Field 1" />
+                    <FormControl type="text" placeholder="Insira o código de registro do animal" />
                   </Col>
                 </FormGroup>
 
-                <FormGroup controlId="formHorizontalEmail">
+                <FormGroup controlId="formBorn">
                   <Col componentClass={ControlLabel} sm={2}>
-                    Field 2
+                    Nascimento
                   </Col>
                   <Col sm={10}>
-                    <FormControl type="text" placeholder="Field 2" />
+                    <FormControl type="text" placeholder="dd/mm/yyyy" />
+                  </Col>
+                </FormGroup>
+
+                <FormGroup controlId="formWeight">
+                  <Col componentClass={ControlLabel} sm={2}>
+                    Peso
+                  </Col>
+                  <Col sm={10}>
+                    <FormControl type="text" placeholder="Kg" />
+                  </Col>
+                </FormGroup>
+
+                <FormGroup controlId="formScale">
+                  <Col componentClass={ControlLabel} sm={2}>
+                    Envergadura
+                  </Col>
+                  <Col sm={10}>
+                    <FormControl type="text" placeholder="cm" />
+                  </Col>
+                </FormGroup>
+
+                <FormGroup controlId="formCNPJ">
+                  <Col componentClass={ControlLabel} sm={2}>
+                    CNPJ
+                  </Col>
+                  <Col sm={10}>
+                    <FormControl type="text" placeholder="Insira aqui o CNPJ" />
                   </Col>
                 </FormGroup>
 

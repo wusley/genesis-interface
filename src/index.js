@@ -21,7 +21,8 @@ import Footer from './modules/common/Footer';
 
 
 // Pages
-import Home from './modules/pages/Home';
+import List from './modules/pages/List';
+import Success from './modules/pages/Success';
 
 // Structure and routing
 class Page extends Component {
@@ -50,7 +51,8 @@ class Page extends Component {
         <Header /> 
         <section>
           <Switch>
-            <Route exact path='/' component={ Home }/>
+            <Route exact path='/' component={ List }/>
+            <Route exact path='/sucesso' component={ Success }/>
           </Switch>
         </section>
         <Footer />

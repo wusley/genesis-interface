@@ -6,7 +6,7 @@ import Pubsub from 'pubsub-js';
 // Common
 
 // SVGs
-import iconLogo from '../../resource/images/svg/bull.svg';
+import iconLogo from '../../resource/images/svg/logo.svg';
 import stateMenu from '../../resource/images/svg/icon-menu.svg';
 
 // CSS
@@ -52,7 +52,8 @@ export default class Header extends Component {
             <div className="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-phone">
               <NavLink exact to="/" className="box-logo" onClick={ this.closeMenu.bind( this ) }>
                 <ReactSVG path={ iconLogo } svgClassName="icon-logo" />
-                <h1 className="text-logo">CryptoBulls</h1>
+                
+                <h1 className="text-logo">Bovine</h1>
               </NavLink> {/* .box-logo */}
             </div>
 

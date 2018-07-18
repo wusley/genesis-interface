@@ -32,13 +32,6 @@ strong {
   font-family: "robotobold";
 }
 
-.main {
-  // text-align: center;
-}
-
-.cut-line {
-
-}
 
 .hide-phone {
   @media screen and ( $breakpointPhone ) {
@@ -56,4 +49,22 @@ strong {
   @media screen and ( $breakpointDesktop ) {
     display: none;
   }
+}
+
+.modal.in .modal-dialog {
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+
+.checkbox-inline, .radio-inline {
+  position: relative;
+  display: inline;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: 400;
+  vertical-align: middle;
+  cursor: pointer;
 }
