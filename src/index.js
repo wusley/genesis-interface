@@ -19,6 +19,7 @@ import './resource/styles/scss/default.scss';
 import Header from './modules/common/Header';
 import Footer from './modules/common/Footer';
 
+
 // Pages
 import Home from './modules/pages/Home';
 
